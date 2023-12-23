@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
+import MainPage from './page/mainpage';
+import { ChakraProvider } from '@chakra-ui/react'
 
 function App() {
   return (
     <div className="App">
-      <h1>TYMR</h1>
+      <ChakraProvider>
+        <MainPage />
+      </ChakraProvider>
     </div>
   );
 }
