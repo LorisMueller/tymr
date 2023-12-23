@@ -4,6 +4,7 @@ import sound2 from '../sounds/alarm-2.wav';
 import sound3 from '../sounds/alarm-3.wav';
 import sound4 from '../sounds/alarm-4.wav';
 import sound5 from '../sounds/alarm-5.mp3';
+import sound6 from '../sounds/alarm-6.mp3';
 import './mainpage.css';
 import { Button, Input } from '@chakra-ui/react'
 import CountdownTimer from '../components/CountdownTimer';
@@ -17,6 +18,7 @@ const MainPage = () => {
     { label: 'Alarm 3', sound: sound3 },
     { label: 'Alarm 4', sound: sound4 },
     { label: 'Alarm 5', sound: sound5 },
+    { label: 'Pau-Pau Special', sound: sound6 },
   ];
 
   const [timeValue, setTimeValue] = useState(0);
