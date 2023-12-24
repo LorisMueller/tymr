@@ -25,6 +25,8 @@ const MainPage = () => {
   const [repeatValue, setRepeatValue] = useState(0);
   const [dateTime, setDateTime] = useState(0);
   const [selectedSound, setSelectedSound] = useState(sounds[0]);
+  const audio = new Audio(selectedSound.sound);
+  audio.muted = true;
 
   const timeSetter = (e) => {
     setTimeValue(e.target.value);
@@ -36,11 +38,13 @@ const MainPage = () => {
 
   const playSound = () => {
     const audio = new Audio(selectedSound.sound);
+    audio.muted = false;
     audio.play();
   };
 
   const playInterval = () => {
     setDateTime(new Date().getTime() + (timeValue * 60000));
+    playSound();
     const intervalId = setInterval(() => {
       playSound();
       counter++;
